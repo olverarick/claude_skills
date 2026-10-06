@@ -1,0 +1,10 @@
+{
+  "name": "correo-reasignacion-github-copilot",
+  "version": "0.1.0",
+  "description": "Genera el correo mensual de notificación de reasignación de licencias de GitHub Copilot (INEGI) para cualquier equipo/área a partir de un CSV de seguimiento.",
+  "license": "MIT",
+  "author": {
+    "name": "Rick Olvera",
+    "email": "ricardo.olvera.n@gmail.com"
+  }
+}

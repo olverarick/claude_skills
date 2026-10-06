@@ -1,0 +1,10 @@
+{
+  "name": "fichas-tecnicas",
+  "version": "0.1.0",
+  "description": "Genera fichas informativas técnicas en Markdown, estilo Pato Bug Traduce, con mitos vs realidad, diagrama de funcionamiento y referencias verificables.",
+  "license": "MIT",
+  "author": {
+    "name": "Rick Olvera",
+    "email": "ricardo.olvera.n@gmail.com"
+  }
+}

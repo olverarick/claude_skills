@@ -1,0 +1,10 @@
+{
+  "name": "evaluador-portafolio",
+  "version": "0.1.0",
+  "description": "Ejecuta la evaluación semestral de portafolio tecnológico de un equipo de desarrollo: scoring ponderado, reporte ejecutivo y fichas individuales de retroalimentación.",
+  "license": "MIT",
+  "author": {
+    "name": "Rick Olvera",
+    "email": "ricardo.olvera.n@gmail.com"
+  }
+}

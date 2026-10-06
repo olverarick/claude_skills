@@ -1,0 +1,10 @@
+{
+  "name": "adr-mgat",
+  "version": "0.1.0",
+  "description": "Crea y clasifica Architecture Decision Records (ADR) dentro del Marco de Gobierno de Arquitectura Tecnológica (MGAT), listos para incorporarse al Nivel 4 del marco.",
+  "license": "MIT",
+  "author": {
+    "name": "Rick Olvera",
+    "email": "ricardo.olvera.n@gmail.com"
+  }
+}

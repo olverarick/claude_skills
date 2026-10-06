@@ -1,0 +1,10 @@
+{
+  "name": "pdf-to-md",
+  "version": "0.1.0",
+  "description": "Transforma documentos PDF a Markdown con auditoría completa del proceso de conversión, incluyendo PDFs escaneados y con layouts complejos.",
+  "license": "MIT",
+  "author": {
+    "name": "Rick Olvera",
+    "email": "ricardo.olvera.n@gmail.com"
+  }
+}

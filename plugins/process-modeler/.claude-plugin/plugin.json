@@ -1,0 +1,10 @@
+{
+  "name": "process-modeler",
+  "version": "0.1.0",
+  "description": "Documenta, enriquece y estandariza procesos organizacionales de TI bajo ITIL 4, BPMN 2.0 y RACI, generando Markdown listo para versionar en Git.",
+  "license": "MIT",
+  "author": {
+    "name": "Rick Olvera",
+    "email": "ricardo.olvera.n@gmail.com"
+  }
+}

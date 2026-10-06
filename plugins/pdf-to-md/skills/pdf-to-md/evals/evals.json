@@ -1,0 +1,88 @@
+{
+  "skill_name": "pdf-to-md",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Tengo este PDF de un informe trimestral de ventas con tablas y texto. Conviértelo a Markdown y dime qué tan bien quedó la conversión.",
+      "expected_output": "Archivo .md con el contenido del informe incluyendo las tablas en formato Markdown, más un reporte de auditoría indicando que fue texto nativo y cuántas tablas se convirtieron.",
+      "files": ["/home/claude/pdf-to-md-workspace/test_pdfs/01_texto_nativo.pdf"],
+      "assertions": [
+        {
+          "name": "genera_archivo_md",
+          "description": "Se produce al menos un archivo .md con contenido del PDF",
+          "type": "file_exists_and_nonempty"
+        },
+        {
+          "name": "tabla_en_markdown",
+          "description": "El MD contiene al menos una tabla Markdown (línea con pipes |)",
+          "type": "content_contains",
+          "value": "|"
+        },
+        {
+          "name": "genera_audit",
+          "description": "Se produce un archivo de auditoría _audit.md",
+          "type": "file_exists_and_nonempty"
+        },
+        {
+          "name": "audit_menciona_tipo",
+          "description": "La auditoría menciona el tipo de PDF (text/texto nativo)",
+          "type": "audit_contains_type"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Me mandaron este PDF escaneado de un acta de reunión. Necesito el contenido en Markdown para subirlo a nuestra wiki. Si no se puede convertir algo bien, que quede documentado.",
+      "expected_output": "Archivo .md con el texto del acta extraído por OCR. Auditoría indicando que fue procesado por OCR con el nivel de confianza. Si la confianza es baja, el MD debe contener una advertencia visible.",
+      "files": ["/home/claude/pdf-to-md-workspace/test_pdfs/02_escaneado.pdf"],
+      "assertions": [
+        {
+          "name": "genera_archivo_md",
+          "description": "Se produce un archivo .md",
+          "type": "file_exists_and_nonempty"
+        },
+        {
+          "name": "audit_menciona_ocr",
+          "description": "La auditoría menciona OCR o escaneado",
+          "type": "audit_mentions_ocr"
+        },
+        {
+          "name": "texto_reunion_presente",
+          "description": "El MD contiene algún fragmento del acta (palabras como reunión, comité, asistentes, resoluciones)",
+          "type": "content_contains_any",
+          "values": ["reuni", "comit", "asistent", "resoluc", "Reuni", "Comit"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Este PDF es un manual técnico con un diagrama (imagen) y unas tablas de requisitos. Necesito transformarlo a Markdown. Las imágenes que no se puedan convertir a texto, que al menos quede una nota de lo que contienen.",
+      "expected_output": "Archivo .md con el texto del manual, las tablas en formato Markdown, referencias a imágenes extraídas con notas descriptivas. Auditoría que detalla qué se convirtió directamente y qué requirió aproximación.",
+      "files": ["/home/claude/pdf-to-md-workspace/test_pdfs/03_mixto_con_imagen.pdf"],
+      "assertions": [
+        {
+          "name": "genera_archivo_md",
+          "description": "Se produce un archivo .md",
+          "type": "file_exists_and_nonempty"
+        },
+        {
+          "name": "tabla_requisitos_presente",
+          "description": "El MD contiene la tabla de requisitos del sistema",
+          "type": "content_contains_any",
+          "values": ["CPU", "RAM", "Disco", "disco"]
+        },
+        {
+          "name": "imagen_referenciada",
+          "description": "El MD referencia alguna imagen (sintaxis ![ ) o hay nota sobre imagen no convertible",
+          "type": "content_contains_any",
+          "values": ["![", "imagen", "Imagen", "diagrama", "Diagrama"]
+        },
+        {
+          "name": "genera_audit",
+          "description": "Se produce auditoría con información sobre imágenes",
+          "type": "file_exists_and_nonempty"
+        }
+      ]
+    }
+  ]
+}

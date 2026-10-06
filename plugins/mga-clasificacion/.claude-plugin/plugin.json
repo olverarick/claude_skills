@@ -1,0 +1,10 @@
+{
+  "name": "mga-clasificacion",
+  "version": "0.1.0",
+  "description": "Dictamina si una tecnología, práctica o procedimiento debe incorporarse al MGAT y en qué instrumento (Arquitectura de Referencia, Anexo Técnico, Estándar de Desarrollo, ADR, etc.).",
+  "license": "MIT",
+  "author": {
+    "name": "Rick Olvera",
+    "email": "ricardo.olvera.n@gmail.com"
+  }
+}

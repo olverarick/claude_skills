@@ -1,0 +1,10 @@
+{
+  "name": "licencias-ssptic",
+  "version": "0.1.0",
+  "description": "Genera el correo mensual de notificación de reasignación de licencias para SSPTIC (INEGI) a partir de un CSV de seguimiento.",
+  "license": "MIT",
+  "author": {
+    "name": "Rick Olvera",
+    "email": "ricardo.olvera.n@gmail.com"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "olverarick-skills",
+  "owner": {
+    "name": "Rick Olvera",
+    "email": "ricardo.olvera.n@gmail.com"
+  },
+  "description": "Skills institucionales de Rick Olvera para gobierno de arquitectura tecnológica (MGAT), gestión de licencias, modelado de procesos y productividad documental.",
+  "license": "MIT",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "adr-mgat",
+      "source": "./plugins/adr-mgat",
+      "description": "Crea y clasifica Architecture Decision Records (ADR) dentro del Marco de Gobierno de Arquitectura Tecnológica (MGAT), listos para incorporarse al Nivel 4 del marco.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "correo-reasignacion-github-copilot",
+      "source": "./plugins/correo-reasignacion-github-copilot",
+      "description": "Genera el correo mensual de notificación de reasignación de licencias de GitHub Copilot (INEGI) para cualquier equipo/área a partir de un CSV de seguimiento.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "evaluador-portafolio",
+      "source": "./plugins/evaluador-portafolio",
+      "description": "Ejecuta la evaluación semestral de portafolio tecnológico de un equipo de desarrollo: scoring ponderado, reporte ejecutivo y fichas individuales de retroalimentación.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "fichas-tecnicas",
+      "source": "./plugins/fichas-tecnicas",
+      "description": "Genera fichas informativas técnicas en Markdown, estilo Pato Bug Traduce, con mitos vs realidad, diagrama de funcionamiento y referencias verificables.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "licencias-ssptic",
+      "source": "./plugins/licencias-ssptic",
+      "description": "Genera el correo mensual de notificación de reasignación de licencias para SSPTIC (INEGI) a partir de un CSV de seguimiento.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "mga-clasificacion",
+      "source": "./plugins/mga-clasificacion",
+      "description": "Dictamina si una tecnología, práctica o procedimiento debe incorporarse al MGAT y en qué instrumento (Arquitectura de Referencia, Anexo Técnico, Estándar de Desarrollo, ADR, etc.).",
+      "version": "0.1.0"
+    },
+    {
+      "name": "pdf-to-md",
+      "source": "./plugins/pdf-to-md",
+      "description": "Transforma documentos PDF a Markdown con auditoría completa del proceso de conversión, incluyendo PDFs escaneados y con layouts complejos.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "process-modeler",
+      "source": "./plugins/process-modeler",
+      "description": "Documenta, enriquece y estandariza procesos organizacionales de TI bajo ITIL 4, BPMN 2.0 y RACI, generando Markdown listo para versionar en Git.",
+      "version": "0.1.0"
+    }
+  ]
+}
